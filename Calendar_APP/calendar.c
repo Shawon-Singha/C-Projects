@@ -1,6 +1,12 @@
 /*Find this idea in Bangla coding tutor.Thanks to sir ..First i see this then try myself*/
 
 #include<stdio.h>
+
+int FirstDayOftheYear(int year)
+{
+    /*Calculation for finding the year star*/
+    int day = (year*365 + ((year - 1)/4) - ((year-1)/100) + ((year-1)%400)) % 7;
+}
 int main()
 {
    char *month[]={"January","February","March","April","May","June","July","August","September","October","November","December"};
