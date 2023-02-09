@@ -4,7 +4,7 @@
 
 int FirstDayOftheYear(int year)
 {
-    /*Calculation for finding the year star*/
+    /*Calculation for finding the year start*/
     int day = (year*365 + ((year - 1)/4) - ((year-1)/100) + ((year-1)%400)) % 7;
 }
 int main()
@@ -15,12 +15,14 @@ int main()
 
     printf("Enter your Year:");
     scanf("%d",&year);
-
+     // check the leap year
     if((year%4==0 &&year%100!=0) || (year % 400 ==0))
     {
         days[1] =29;
     }
+     //get the first day of the year
 
+     week = FirstDayOftheYear(year);
     for(int i =0;i<12;i++)
     {
         printf("\n\n-----------------%s-----------------\n",month[i]);
